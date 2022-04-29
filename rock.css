@@ -1,0 +1,23 @@
+body {
+    background-image:url(https://cdn.hipwallpaper.com/i/78/27/PtG2hC.jpg);
+    background-size: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold; text-align: center;
+}
+
+h1 {
+    font-size: 100px; color: red;
+}
+
+p {
+    color: white; font-size: 30px;
+}
+
+#message-el {
+    font-style: italic; font-size: 50px;
+}
+
+#start-btn {
+    color: green; background-color: goldenrod; height: 50px; width: 150px; font-weight: bolder;
+    padding-top: 5px; padding-bottom: 5px; border: none; border-radius: 4px;
+}

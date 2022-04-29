@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rock Paper Scissors</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="rock.css">
+    </head>
+    <body>
+        <div>
+            <h1>Rock Paper Scissors</h1>
+            <p id="message-el">Want to play a round?</p>
+            <p id="first-el">FirstHand</p>
+            <p id="second-el">SecondHand</p>
+            <button type="button" id="start-btn" onclick="startgame()">START GAME</button>
+        </div>
+        <script>
+            let messageEl = document.getElementById("message-el")
+            
+            let firstEl = document.getElementById("first-el")
+            let secondEl = document.getElementById("second-el")
+            let hands = ["rock", "paper", "scissors"]
+           
+            
+
+            function startgame() {
+                let message = ""
+                let firsthand = getrandom()
+                let secondhand = getrandom()
+                firstEl.textContent = "FirstHand : " + firsthand
+                secondEl.textContent = "SecondHand : " + secondhand
+                if (firsthand === hands[0] && secondhand === hands[1]){
+                    message = "SECOND HAND WINS"
+                } else if (firsthand === hands[1] && secondhand === hands[2] ) {
+                    message = "SECOND HAND WINS"
+                }else if ( firsthand === hands[2] && secondhand === hands[0]){
+                    message = "SECOND HAND WINS"
+                }else if ( firsthand === hands[1] && secondhand === hands[1]){
+                    message = "DRAW"
+                }else if ( firsthand === hands[2] && secondhand === hands[2]){
+                    message = "DRAW"
+                }else if ( firsthand === hands[0] && secondhand === hands[0]){
+                    message = "DRAW"
+                }else {
+                    message = "FIRST HAND WINS"
+                }
+                messageEl.textContent = message
+                
+            }
+            function getrandom() {
+                let randomIndex = Math.floor(Math.random() * 3) 
+                return hands[randomIndex]
+            }
+        </script>
+    </body>
+</html>
